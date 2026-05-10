@@ -50,7 +50,7 @@ kotlin {
 }
 
 room {
-    schemaDirectory("$projectDir/schemas")
+    schemaDirectory("${System.getProperty("java.io.tmpdir")}/room_schemas/linkvault")
 }
 
 dependencies {

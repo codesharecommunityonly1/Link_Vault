@@ -4,8 +4,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.List
-import androidx.compose.material.icons.automirrored.filled.LockOpen
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -220,12 +218,12 @@ fun DesktopLinkItem(
             Row {
                 if (link.content != null) {
                     IconButton(onClick = onRead) {
-                        Icon(Icons.AutoMirrored.Filled.List, contentDescription = "Read")
+                        Icon(Icons.Default.List, contentDescription = "Read")
                     }
                 }
                 IconButton(onClick = onTogglePrivacy) {
                     Icon(
-                        if (link.isPrivate) Icons.AutoMirrored.Filled.LockOpen else Icons.Default.Lock,
+                        if (link.isPrivate) Icons.Default.LockOpen else Icons.Default.Lock,
                         contentDescription = "Privacy"
                     )
                 }
